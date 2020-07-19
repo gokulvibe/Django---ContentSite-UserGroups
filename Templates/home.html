@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Page</title>
+</head>
+
+<body>
+    <p>This is great</p>
+    {% if user.is_authenticated%}
+    <li>Hello,{{user.first_name}}</li>
+    <li><a href="accounts/logout">Logout</a></li>
+    {% else %}
+    <li><a href="accounts/register">Register</a></li>
+    <li><a href="accounts/login">Login</a></li>
+    {% endif %}
+    <br> {% for dat in data %} {% if dat.permission %}
+    <h1>{{dat.name}}</h1>
+    <img src="{{dat.img.url}}" width="1200" height="700">
+    <object data="{{dat.pdf.url}}" type="application/pdf" width="600" height="500">
+        <a href="{{dat.pdf.url}}">PDF file</a>
+      </object>
+    <p>{{dat.desc}}</p>
+    {% endif %} {% endfor %}
+</body>
+
+</html>
