@@ -2,8 +2,6 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from .models import Datas
 from accounts.views import *
-#from guardian.core import ObjectPermissionChecker
-#from guardian.shortcuts import get_perms
 # Create your views here.
 def home(request):
     

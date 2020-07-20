@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'guardian',
 ]
 
 MIDDLEWARE = [
@@ -129,5 +128,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
-    'guardian.backends.ObjectPermissionBackend',
 )
